@@ -1,0 +1,14 @@
+ 444  sudo curl -L -o /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+  445  cat jenkins.repo
+  446  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+  447  sudo dnf clean all
+  448  sudo dnf makecache
+  449  sudo dnf install jenkins -y
+  450  sudo systemctl start jenkins
+  451  sudo systemctl enable jenkins
+  452  sudo systemctl start jenkins
+  453  sudo systemctl enable jenkins
+  454  sudo firewall-cmd --add-port=8080/tcp --permanent
+  455  sudo firewall-cmd --reload
+  456  ip a
+  457  cat /var/lib/jenkins/secrets/initialAdminPassword
