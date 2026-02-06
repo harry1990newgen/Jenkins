@@ -12,3 +12,13 @@
   455  sudo firewall-cmd --reload
   456  ip a
   457  cat /var/lib/jenkins/secrets/initialAdminPassword
+
+vi /etc/sudoers
+ansible ALL=(ALL)  NOPASSWD: ALL
+jenkins ALL=(ALL)  NOPASSWD: ALL
+
+groupadd webuser
+usermod -aG webuser jenkins
+usermod -aG webuser ansible
+
+
