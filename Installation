@@ -12,7 +12,8 @@ preprod/dev env :
        systemctl stop firewalld --> (service at server level to control the incoming/outgoing traffic)
 prod servers :
   454  sudo firewall-cmd --add-port=8080/tcp --permanent
-  455  sudo firewall-cmd --reload
+  455  sudo firewall-cmd --reload or systemctl reload firewalld
+
   456  ip a
   457  cat /var/lib/jenkins/secrets/initialAdminPassword
 
