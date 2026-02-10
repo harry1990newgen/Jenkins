@@ -8,6 +8,9 @@
   451  sudo systemctl enable jenkins
   452  sudo systemctl start jenkins
   453  sudo systemctl enable jenkins
+preprod/dev env :
+       systemctl stop firewalld --> (service at server level to control the incoming/outgoing traffic)
+prod servers :
   454  sudo firewall-cmd --add-port=8080/tcp --permanent
   455  sudo firewall-cmd --reload
   456  ip a
